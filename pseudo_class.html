@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        p::before{
+            counter-increment: section;
+            content: "List " counter(section) ": ";
+        }
+        li:last-child{
+            background-color: red;
+        }
+       .arif::before{
+           content: "👤";
+       }
+       .para{
+           width: 100px;
+           height: 100px;
+           background-color: blueviolet;
+           overflow: auto;
+
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <p class="arif">Arif</p>
+        <div class="para">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nemo corrupti, sint itaque delectus fuga nisi obcaecati debitis, hic quibusdam doloribus at, vel cupiditate asperiores temporibus et facere consequatur maxime!</p>
+        </div>
+        
+        
+    </ul>
+    <section>
+        <h1>
+            Learning and position high
+        </h1>
+    </section>
+    <section class="container">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </section>
+</body>
+</html>
